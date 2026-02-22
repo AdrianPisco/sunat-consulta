@@ -30,7 +30,7 @@ public class SunatController {
     @GetMapping("/ruc/{ruc}")
     public ResponseEntity<CompanyResponse> consultarRuc(
             @PathVariable
-            @Pattern(regexp = "\\d{11}", message = "El RUC debe tener exactamente 11 dígitos numéricos")
+            @Pattern(regexp = "\\d{11}", message = "El RUC debe tener exactamente 11 dígitos")
             String ruc
     ) {
         return ResponseEntity.ok(
@@ -41,7 +41,7 @@ public class SunatController {
     @GetMapping("/ruc/{ruc}/consultas")
     public ResponseEntity<List<ConsultaResponse>> historial(
             @PathVariable
-            @Pattern(regexp = "\\d{11}", message = "El RUC debe tener exactamente 11 dígitos numéricos")
+            @Pattern(regexp = "\\d{11}", message = "El RUC debe tener exactamente 11 dígitos")
             String ruc
     ) {
 
